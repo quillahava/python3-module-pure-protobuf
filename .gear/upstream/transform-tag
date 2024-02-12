@@ -1,0 +1,4 @@
+#!/bin/bash
+while read tag; do
+  echo "v${tag}"
+done

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir -p .gear/tags 
+
+git tag | ./.gear/upstream/filter-tag | while read original_tag; do
+  commit_hash=$(git rev-list -n 1 "$original_tag")
+  
+  transformed_tag="v${original_tag}"
+  
+  echo "$commit_hash $transformed_tag"
+done > .gear/tags/list
+

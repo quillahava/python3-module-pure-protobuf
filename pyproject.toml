@@ -3,7 +3,7 @@ name = "pure-protobuf"
 description = "Implementation of Protocol Buffers with dataclass-based schemaʼs"
 readme = "README.md"
 requires-python = ">=3.7"
-dynamic = ["version"]
+version = "2.3.0" # Указываем версию проекта явно
 keywords = ["protobuf", "protocol-buffers"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -47,15 +47,8 @@ name = "Pavel Perestoronin"
 email = "eigenein@gmail.com"
 
 [build-system]
-requires = ["hatchling", "hatch-vcs"]
+requires = ["hatchling"] # Убрали "hatch-vcs"
 build-backend = "hatchling.build"
-
-[tool.hatch.version]
-source = "vcs"
-
-[tool.hatch.version.raw-options]
-version_scheme = "post-release"
-local_scheme = "no-local-version"
 
 [tool.hatch.build]
 packages = [
